@@ -26,7 +26,13 @@ export default function FeedScreen() {
 
 
   // TODO 5: Filter the Following feed in Step 6.
-  const visiblePosts = posts;
+  const visiblePosts = useMemo(() => {
+  if (selectedFeed === 'following') {
+    return posts.filter((post) => post.following);
+  }
+
+  return posts;
+}, [selectedFeed]);
 
   function handleLike(id) {
     // TODO 6: Toggle likedIds in Step 7.
