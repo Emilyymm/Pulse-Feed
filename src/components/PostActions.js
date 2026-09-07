@@ -38,13 +38,20 @@ export default function PostActions({
         onPress={() => onLike(id)}
       />
 
-      <Action icon="stats-chart-outline" value={views >= 1000 ? `${(views / 1000).toFixed(1)}K` : views} />
+      <Action
+        icon="stats-chart-outline"
+        value={
+          views >= 1000
+            ? `${(views / 1000).toFixed(1)}K`
+            : views
+        }
+      />
 
       {/* TODO 3: Connect the Bookmark action from Step 4. */}
       <Action
         icon={bookmarked ? 'bookmark' : 'bookmark-outline'}
         color={bookmarked ? colors.accent : undefined}
-        onPress={() => {}}
+        onPress={() => onBookmark(id)}
       />
     </View>
   );

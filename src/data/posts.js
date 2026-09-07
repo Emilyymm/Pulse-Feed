@@ -70,7 +70,20 @@ const posts = [
   views: 5200,
   following: true,
 },
-
+{
+  id: 'post-206',
+  displayName: 'Emily',
+  username: 'emily',
+  time: '1h',
+  content: 'Dinosaur fact: Stegosaurus had a brain about the size of a walnut, but somehow survived for millions of years.',
+  avatar: require('../assets/images/you.png'),
+  imageSource: null,
+  replies: 4,
+  reposts: 9,
+  likes: 10000,
+  views: 2100,
+  following: true,
+},
 ];
 
 export default posts;
